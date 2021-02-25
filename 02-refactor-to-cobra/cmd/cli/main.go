@@ -6,7 +6,8 @@ import (
 )
 
 func main() {
-	rootCmd := &cobra.Command{Use: "beers-cli"}
+	rootCmd := &cobra.Command{Use: "cli"}
+	rootCmd.AddCommand(cli.InitStoresCmd())
 	rootCmd.AddCommand(cli.InitBeersCmd())
 	rootCmd.Execute()
 }
